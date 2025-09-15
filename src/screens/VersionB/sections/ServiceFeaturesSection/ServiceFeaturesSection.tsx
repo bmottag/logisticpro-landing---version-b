@@ -9,12 +9,12 @@ export const ServiceFeaturesSection = (): JSX.Element => {
       iconClasses: "w-[21px] h-[22px]",
     },
     {
-      icon: "https://c.animaapp.com/mfif8x3oj7OD46/img/mail-1.svg",
+      icon: "https://c.animaapp.com/mfif8x3oj7OD46/img/envelope-1.svg",
       text: "support@logistiquepro.com",
       iconClasses: "w-[22px] h-[17px]",
     },
     {
-      icon: "https://c.animaapp.com/mfif8x3oj7OD46/img/location-1.svg",
+      icon: "https://c.animaapp.com/mfif8x3oj7OD46/img/map-pin-1.svg",
       text: "123 Delivery St, Canada, Montreal 12345",
       iconClasses: "w-[19px] h-[27px]",
     },
@@ -46,7 +46,7 @@ export const ServiceFeaturesSection = (): JSX.Element => {
       classes: "w-5 h-5",
     },
     {
-      icon: "https://c.animaapp.com/mfif8x3oj7OD46/img/twitter-1.svg",
+      icon: "https://c.animaapp.com/mfif8x3oj7OD46/img/x-1.svg",
       classes: "w-[19px] h-[18px]",
     },
   ];
@@ -135,10 +135,10 @@ export const ServiceFeaturesSection = (): JSX.Element => {
         </div>
 
         {/* Divider */}
-        <Separator className="bg-white/20 mb-4 md:mb-6" />
+        <Separator className="bg-white/20 mb-2 md:mb-3" />
 
         {/* Bottom Section - Copyright and Social Icons */}
-        <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-2 md:gap-4">
           {/* Copyright */}
           <div className="[font-family:'Inter',Helvetica] font-normal text-white text-sm md:text-base tracking-[0] leading-4 order-2 md:order-1">
             © 2025 LogistiquePro. All rights reserved.

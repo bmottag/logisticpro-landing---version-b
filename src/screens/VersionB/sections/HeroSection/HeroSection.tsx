@@ -11,7 +11,7 @@ export const HeroSection = (): JSX.Element => {
   ];
 
   return (
-    <div className="w-full max-w-[320px] sm:max-w-[400px] md:max-w-[479px] [font-family:'Encode_Sans',Helvetica] font-normal text-[32px] sm:text-[48px] md:text-[64px] lg:text-[80px] xl:text-[90px] tracking-[0] leading-[36px] sm:leading-[52px] md:leading-[68px] lg:leading-[84px] xl:leading-[90px]">
+    <div className="w-full max-w-[320px] sm:max-w-[400px] md:max-w-[479px] [font-family:'Encode_Sans',Helvetica] font-normal text-[36px] sm:text-[52px] md:text-[68px] lg:text-[84px] xl:text-[90px] tracking-[0] leading-[40px] sm:leading-[56px] md:leading-[72px] lg:leading-[88px] xl:leading-[90px]">
       <h1 className="font-medium">
         {textSegments.map((segment, index) => (
           <span

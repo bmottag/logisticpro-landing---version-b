@@ -198,7 +198,7 @@ export const VersionB = (): JSX.Element => {
 
       {/* About Us Section - Van image left, text right */}
       <section id="about" className="relative w-full">
-        <div className="relative max-w-[1440px] mx-auto">
+        <div className="relative w-full">
           <img
             className="w-full h-[692px] object-cover"
             alt="Van being unloaded"
@@ -207,7 +207,7 @@ export const VersionB = (): JSX.Element => {
 
           <div className="absolute inset-0 bg-gradient-to-r from-transparent to-[#002319]" />
 
-          <div className="absolute inset-0 flex items-center justify-end px-16">
+          <div className="absolute inset-0 flex items-center justify-end px-4 md:px-8 lg:px-20 xl:px-32">
             <AboutUsSection />
           </div>
         </div>
@@ -349,7 +349,8 @@ export const VersionB = (): JSX.Element => {
           className="absolute inset-0 w-full h-full bg-cover bg-no-repeat"
           style={{
             backgroundImage: "url(https://c.animaapp.com/mfif8x3oj7OD46/img/pexels-karolina-grabowska-4506225-1.png)",
-            backgroundPosition: "20% center",
+            backgroundPosition: "40% center",
+            backgroundSize: "cover",
             filter: "brightness(1.2) contrast(1.15) saturate(1.1)"
           }}
         />
@@ -357,10 +358,10 @@ export const VersionB = (): JSX.Element => {
         {/* Gradient Overlay - Light on the left, darker on the right for text readability */}
         <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-black/20 via-black/40 to-black/75" />
         
-        <div className="relative z-10 max-w-[1440px] mx-auto px-16 py-16">
+        <div className="relative z-10 w-full px-4 md:px-8 lg:px-16 xl:px-20 py-16">
           {/* Title at the top right, aligned left */}
-          <div className="mb-8 md:mb-16 flex justify-center md:justify-end">
-            <div className="w-full max-w-full md:max-w-3xl px-4 md:mr-4">
+          <div className="mb-8 md:mb-16 flex justify-center md:justify-center lg:justify-end">
+            <div className="w-full max-w-full md:max-w-4xl lg:max-w-3xl px-4 md:mr-0 lg:mr-16">
               <TipsForMovingSection />
             </div>
           </div>
