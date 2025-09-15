@@ -80,7 +80,7 @@ export const VersionB = (): JSX.Element => {
     <div className="bg-[#002319] w-full min-h-screen" data-model-id="57:303">
       {/* Navigation Header - Sticky */}
       <header className="sticky top-0 w-full bg-[#002319] z-40">
-        <div className="flex items-center px-4 md:px-8 lg:px-16 py-8 md:py-10 lg:py-12 max-w-[1440px] mx-auto">
+        <div className="flex items-center px-4 md:px-10 lg:px-16 xl:px-20 py-8 md:py-10 lg:py-12 w-full">
           {/* Logo */}
           <img
             className="w-[200px] md:w-[240px] lg:w-[269px] h-auto translate-y-[-1rem] animate-fade-in opacity-0 flex-shrink-0"
@@ -143,14 +143,14 @@ export const VersionB = (): JSX.Element => {
 
       {/* Hero Section with Background */}
       <section id="hero" className="relative w-full">
-        <div className="relative max-w-[1440px] mx-auto">
+        <div className="relative w-full">
           <img
             className="w-full h-[500px] sm:h-[600px] md:h-[700px] lg:h-[772px] object-cover"
             alt="Shutterstock"
             src="https://c.animaapp.com/mfif8x3oj7OD46/img/shutterstock-1661663446-1.png"
           />
 
-          <div className="absolute inset-0 flex flex-col justify-center px-4 sm:px-8 md:px-12 lg:px-16">
+          <div className="absolute inset-0 flex flex-col justify-center px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20">
             <div className="mb-6 md:mb-8">
               <HeroSection />
             </div>
