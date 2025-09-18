@@ -13,8 +13,8 @@ import { WhyChooseUsSection } from "./sections/WhyChooseUsSection/WhyChooseUsSec
 
 const navigationItems = [
   { label: "Home", href: "#hero" },
-  { label: "About", href: "#about" },
   { label: "Services", href: "#services" },
+  { label: "About", href: "#about" },
   { label: "Conseils", href: "#conseils" },
 ];
 
@@ -109,7 +109,7 @@ export const VersionB = (): JSX.Element => {
             {/* Sign In Button */}
             <Button className="w-[120px] md:w-[145px] h-[35px] md:h-[39px] bg-white rounded-[10px] border-2 border-solid border-[#00da5b] text-[#00da5b] hover:bg-[#00da5b] hover:text-white transition-colors translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:400ms] h-auto">
               <span className="[font-family:'Inter',Helvetica] font-normal text-lg md:text-xl tracking-[0] leading-5">
-                Sign In
+                Réserver
               </span>
             </Button>
 
@@ -154,11 +154,10 @@ export const VersionB = (): JSX.Element => {
             <div className="mb-6 md:mb-8">
               <HeroSection />
             </div>
-            
-            <div className="w-full max-w-[300px] sm:max-w-[350px] md:max-w-[362px] translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:600ms]">
+            <div className="w-full max-w-[320px] sm:max-w-[400px] md:max-w-[479px] lg:max-w-[700px] xl:max-w-[900px] translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:600ms]">
               <p className="[font-family:'Inter',Helvetica] font-normal text-white text-[16px] sm:text-[20px] md:text-[22px] lg:text-[25px] tracking-[0] leading-[24px] sm:leading-[30px] md:leading-[34px] lg:leading-[38px]">
-                Du premier appel jusqu'à l'installation du dernier objet. vous
-                n'êtes jamais seul.
+                Du premier appel jusqu’à l’installation du dernier objet, vous n’êtes jamais seul. 
+                Nous sommes vos alliés, vos accompagnateurs et ceux qui trouvent des solutions.
               </p>
             </div>
           </div>
