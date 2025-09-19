@@ -1,0 +1,13 @@
+<svg width="269" height="30" viewBox="0 0 269 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_57_304)">
+<path d="M0 0H43V30H0V0Z" fill="#00DA5B"/>
+<path d="M21.5 7.5C25.0899 7.5 28 10.4101 28 14C28 17.5899 25.0899 20.5 21.5 20.5C17.9101 20.5 15 17.5899 15 14C15 10.4101 17.9101 7.5 21.5 7.5Z" fill="white"/>
+<path d="M21.5 10C23.433 10 25 11.567 25 13.5C25 15.433 23.433 17 21.5 17C19.567 17 18 15.433 18 13.5C18 11.567 19.567 10 21.5 10Z" fill="#00DA5B"/>
+</g>
+<text x="55" y="21" font-family="Inter, sans-serif" font-size="24" font-weight="600" fill="white">LogistiquePro</text>
+<defs>
+<clipPath id="clip0_57_304">
+<rect width="43" height="30" fill="white"/>
+</clipPath>
+</defs>
+</svg>

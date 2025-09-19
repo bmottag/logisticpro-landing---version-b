@@ -61,8 +61,8 @@ export const ServiceFeaturesSection = (): JSX.Element => {
             <div className="flex items-center gap-4 mb-6 md:mb-8">
               <img
                 className="w-[43px] h-[26px]"
-                alt="Logo"
-                src="https://c.animaapp.com/mfif8x3oj7OD46/img/logo-1.svg"
+                alt="LogistiquePro Logo"
+                src="./images/logo.svg"
               />
               <h2 className="[font-family:'Inter',Helvetica] font-semibold text-white text-2xl md:text-3xl tracking-[0] leading-[30px]">
                 LogistiquePro

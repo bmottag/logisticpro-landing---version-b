@@ -84,8 +84,8 @@ export const VersionB = (): JSX.Element => {
           {/* Logo */}
           <img
             className="w-[200px] md:w-[240px] lg:w-[269px] h-auto translate-y-[-1rem] animate-fade-in opacity-0 flex-shrink-0"
-            alt="Asset"
-            src="https://c.animaapp.com/mfif8x3oj7OD46/img/asset-6-1.svg"
+            alt="LogistiquePro Logo"
+            src="./images/logo.svg"
           />
 
           {/* Navigation Menu - Right after logo with more padding */}
