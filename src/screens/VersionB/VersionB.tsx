@@ -2,6 +2,7 @@ import React from "react";
 import { Button } from "../../components/ui/button";
 import { Card, CardContent } from "../../components/ui/card";
 import { Input } from "../../components/ui/input";
+import { ServiceModal } from "../../components/ServiceModal";
 import { AboutUsSection } from "./sections/AboutUsSection/AboutUsSection";
 import { CallToActionSection } from "./sections/CallToActionSection/CallToActionSection";
 import { CustomerTestimonialsSection } from "./sections/CustomerTestimonialsSection/CustomerTestimonialsSection";
@@ -59,6 +60,8 @@ const serviceCards = [
 
 export const VersionB = (): JSX.Element => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
+  const [modalOpen, setModalOpen] = React.useState(false);
+  const [selectedService, setSelectedService] = React.useState<'residential' | 'commercial'>('residential');
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId.replace('#', ''));
@@ -74,6 +77,11 @@ export const VersionB = (): JSX.Element => {
       });
     }
     setIsMobileMenuOpen(false);
+  };
+
+  const handleServiceClick = (serviceType: 'residential' | 'commercial') => {
+    setSelectedService(serviceType);
+    setModalOpen(true);
   };
 
   return (
@@ -173,8 +181,14 @@ export const VersionB = (): JSX.Element => {
             {serviceCards.map((service, index) => (
               <Card
                 key={index}
-                className="border border-solid border-[#d9d9d9] rounded-[10px] p-4 md:p-5 lg:p-6 hover:shadow-lg transition-shadow translate-y-[-1rem] animate-fade-in opacity-0 w-full"
+                className={`border border-solid border-[#d9d9d9] rounded-[10px] p-4 md:p-5 lg:p-6 hover:shadow-lg transition-all translate-y-[-1rem] animate-fade-in opacity-0 w-full ${
+                  index < 2 ? 'cursor-pointer hover:border-[#00da5b] hover:scale-105' : ''
+                }`}
                 style={{ "--animation-delay": `${800 + index * 100}ms` } as React.CSSProperties}
+                onClick={() => {
+                  if (index === 0) handleServiceClick('residential');
+                  if (index === 1) handleServiceClick('commercial');
+                }}
               >
                 <CardContent className="p-0">
                   <img
@@ -188,10 +202,19 @@ export const VersionB = (): JSX.Element => {
                   <p className="[font-family:'Inter',Helvetica] font-normal text-[#002319] text-sm md:text-[15px] tracking-[0] leading-[18px] md:leading-[19.7px]">
                     {service.description}
                   </p>
+                  {index < 2 && (
+                    <div className="mt-4 flex items-center text-[#00da5b] text-sm font-medium">
+                      <span>Ver precios y detalles</span>
+                      <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </div>
+                  )}
                 </CardContent>
               </Card>
             ))}
           </div>
+
         </div>
       </section>
 
@@ -368,6 +391,13 @@ export const VersionB = (): JSX.Element => {
 
       {/* Footer Section */}
       <ServiceFeaturesSection />
+
+      {/* Service Modal */}
+      <ServiceModal 
+        isOpen={modalOpen}
+        onClose={() => setModalOpen(false)}
+        serviceType={selectedService}
+      />
     </div>
   );
 };
