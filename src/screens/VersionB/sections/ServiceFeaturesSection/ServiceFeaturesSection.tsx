@@ -4,49 +4,46 @@ import { Separator } from "../../../../components/ui/separator";
 export const ServiceFeaturesSection = (): JSX.Element => {
   const contactInfo = [
     {
-      icon: "https://c.animaapp.com/mfif8x3oj7OD46/img/phone-1.svg",
-      text: "(555) 123-4567",
+      icon: "./images/phone.svg",
+      text: "(438) 833-2492",
       iconClasses: "w-[21px] h-[22px]",
     },
     {
-      icon: "https://c.animaapp.com/mfif8x3oj7OD46/img/envelope-1.svg",
-      text: "support@logistiquepro.com",
+      icon: "./images/envelope.svg",
+      text: "info@logistiquepro.com",
       iconClasses: "w-[22px] h-[17px]",
-    },
-    {
-      icon: "https://c.animaapp.com/mfif8x3oj7OD46/img/map-pin-1.svg",
-      text: "123 Delivery St, Canada, Montreal 12345",
-      iconClasses: "w-[19px] h-[27px]",
     },
   ];
 
   const servicesLinks = [
-    "Same Day Delivery",
-    "Express Delivery",
-    "Scheduled Delivery",
-    "International Shipping",
-    "Package Tracking",
+    "Déménagement résidentiel",
+    "Déménagement commercial",
+    "Emballage et déballage",
+    "Transport longue distance",
+    "Entreposage temporaire",
+    "Installations spéciales",
   ];
 
   const companyLinks = [
-    "About Us",
-    "Carrers",
-    "Press",
-    "Privacy Policy",
-    "Terms of Service",
+    "À propos",
+    "Nous joindre",
+    "Réserver votre équipe",
   ];
 
   const socialIcons = [
     {
-      icon: "https://c.animaapp.com/mfif8x3oj7OD46/img/facebook-1.svg",
+      icon: "./images/facebook.svg",
+      href: "https://www.facebook.com/logistiquepro.ca",
       classes: "w-3 h-5",
     },
     {
-      icon: "https://c.animaapp.com/mfif8x3oj7OD46/img/instagram-1.svg",
+      icon: "./images/instagram.svg",
+      href: "https://www.instagram.com/logistiquepro.ca",
       classes: "w-5 h-5",
     },
     {
-      icon: "https://c.animaapp.com/mfif8x3oj7OD46/img/x-1.svg",
+      icon: "./images/tiktok.svg",
+      href: "https://www.tiktok.com/@logistiquepro.ca",
       classes: "w-[19px] h-[18px]",
     },
   ];
@@ -62,7 +59,7 @@ export const ServiceFeaturesSection = (): JSX.Element => {
               <img
                 className="w-[43px] h-[26px]"
                 alt="LogistiquePro Logo"
-                src="./images/logo.svg"
+                src="./images/lp_logo.svg"
               />
               <h2 className="[font-family:'Inter',Helvetica] font-semibold text-white text-2xl md:text-3xl tracking-[0] leading-[30px]">
                 LogistiquePro
@@ -70,9 +67,7 @@ export const ServiceFeaturesSection = (): JSX.Element => {
             </div>
 
             <p className="[font-family:'Inter',Helvetica] font-normal text-white text-lg md:text-xl tracking-[0] leading-[24px] md:leading-[26.2px] mb-8 md:mb-12 lg:mb-16">
-              Your trusted delivery partner providing fast, secure, and reliable
-              delivery services across the city. Available 24/7 for all your
-              delivery needs.
+              Des déménagements faits avec cœur, soul, âme et précision.
             </p>
 
             {/* Contact Information */}
@@ -95,7 +90,7 @@ export const ServiceFeaturesSection = (): JSX.Element => {
           {/* Navigation Links */}
           <div className="flex flex-col sm:flex-row gap-8 md:gap-12 lg:gap-[227px] w-full lg:w-auto">
             {/* Services Column */}
-            <div className="w-full sm:w-[169px]">
+            <div className="w-full sm:w-[210px]">
               <h3 className="[font-family:'Inter',Helvetica] font-medium text-white text-lg md:text-xl tracking-[0] leading-5 mb-4 md:mb-6 lg:mb-8">
                 Services
               </h3>
@@ -114,7 +109,7 @@ export const ServiceFeaturesSection = (): JSX.Element => {
             </div>
 
             {/* Company Column */}
-            <div className="w-full sm:w-32">
+            <div className="w-full sm:w-40">
               <h3 className="[font-family:'Inter',Helvetica] font-medium text-white text-lg md:text-xl tracking-[0] leading-5 mb-4 md:mb-6 lg:mb-8">
                 Company
               </h3>
@@ -149,7 +144,7 @@ export const ServiceFeaturesSection = (): JSX.Element => {
             {socialIcons.map((social, index) => (
               <a
                 key={index}
-                href="#"
+                href={social.href}
                 className="hover:opacity-70 transition-opacity"
               >
                 <img

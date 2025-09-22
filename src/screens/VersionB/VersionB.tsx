@@ -12,9 +12,9 @@ import { TipsForMovingSection } from "./sections/TipsForMovingSection/TipsForMov
 import { WhyChooseUsSection } from "./sections/WhyChooseUsSection/WhyChooseUsSection";
 
 const navigationItems = [
-  { label: "Home", href: "#hero" },
+  { label: "Accueil", href: "#hero" },
   { label: "Services", href: "#services" },
-  { label: "About", href: "#about" },
+  { label: "À propos", href: "#about" },
   { label: "Conseils", href: "#conseils" },
 ];
 
@@ -85,7 +85,7 @@ export const VersionB = (): JSX.Element => {
           <img
             className="w-[200px] md:w-[240px] lg:w-[269px] h-auto translate-y-[-1rem] animate-fade-in opacity-0 flex-shrink-0"
             alt="LogistiquePro Logo"
-            src="./images/logo.svg"
+            src="./images/logo.png"
           />
 
           {/* Navigation Menu - Right after logo with more padding */}
@@ -147,7 +147,7 @@ export const VersionB = (): JSX.Element => {
           <img
             className="w-full h-[500px] sm:h-[600px] md:h-[700px] lg:h-[772px] object-cover"
             alt="Shutterstock"
-            src="https://c.animaapp.com/mfif8x3oj7OD46/img/shutterstock-1661663446-1.png"
+            src="./images/hero.png"
           />
 
           <div className="absolute inset-0 flex flex-col justify-center px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20">
@@ -262,30 +262,20 @@ export const VersionB = (): JSX.Element => {
             {/* Left side - Content */}
             <div className="flex-1 max-w-full lg:max-w-[600px] text-left">
               <h2 className="[font-family:'Inter',Helvetica] font-semibold text-white text-xl sm:text-2xl md:text-3xl tracking-[0] leading-[26px] sm:leading-[28px] md:leading-[30px] mb-4 md:mb-6">
-                Ready to Experience Fast Delivery?
+                Réservez votre déménagement en quelques clics !
               </h2>
 
               <p className="[font-family:'Inter',Helvetica] font-normal text-white text-base sm:text-lg md:text-xl tracking-[0] leading-[22px] sm:leading-[24px] md:leading-[26.2px] mb-6 md:mb-8">
-                Join Thousands of satisfied customers who trust us with their
-                delivery needs, Get started today and enjoy reliable, fast
-                delivery service.
+                Cliquez sur le bouton ci-dessous pour accéder à notre page de réservation. Indiquez simplement la taille de votre appartement et découvrez immédiatement notre tarif horaire. Vous pouvez ensuite confirmer votre réservation en toute simplicité !
               </p>
 
               <div className="flex flex-row gap-2 sm:gap-3 md:gap-4 mb-6 md:mb-8">
-                <Input
-                  className="flex-1 min-w-0 h-[38px] sm:h-[40px] md:h-[42px] bg-white rounded-[14px] shadow-[0px_4px_4px_#00000040] border-0 text-sm px-3"
-                  placeholder="Enter your email"
-                />
-                <Button className="flex-shrink-0 w-[100px] sm:w-[120px] md:w-[140px] h-[38px] sm:h-[40px] md:h-[42px] bg-white rounded-[14px] shadow-[0px_4px_4px_#00000040] text-[#00da5b] hover:bg-gray-100 transition-colors h-auto">
+                <Button className="flex-shrink-0 w-[200px] sm:w-[200px] md:w-[220px] h-[38px] sm:h-[40px] md:h-[42px] bg-white rounded-[14px] shadow-[0px_4px_4px_#00000040] text-[#00da5b] hover:bg-gray-100 transition-colors h-auto">
                   <span className="[font-family:'Inter',Helvetica] font-semibold text-sm sm:text-base md:text-lg tracking-[0] leading-[26.2px]">
-                    Get Started
+                    Réserver votre équipe
                   </span>
                 </Button>
               </div>
-
-              <p className="[font-family:'Inter',Helvetica] font-normal text-white text-base sm:text-lg md:text-xl tracking-[0] leading-[22px] sm:leading-[24px] md:leading-[26.2px]">
-                No setup fees. cancel anytime
-              </p>
             </div>
 
             {/* Right side - Image (hidden on small devices) */}
