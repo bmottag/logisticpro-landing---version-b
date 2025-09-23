@@ -115,8 +115,8 @@ export const VersionB = (): JSX.Element => {
           {/* Right side - Sign In Button and Mobile Menu */}
           <div className="flex items-center gap-4">
             {/* Sign In Button */}
-            <Button className="w-[120px] md:w-[145px] h-[35px] md:h-[39px] bg-white rounded-[10px] border-2 border-solid border-[#00da5b] text-[#00da5b] hover:bg-[#00da5b] hover:text-white transition-colors translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:400ms] h-auto">
-              <span className="[font-family:'Inter',Helvetica] font-normal text-lg md:text-xl tracking-[0] leading-5">
+            <Button className="w-[90px] sm:w-[110px] md:w-[145px] h-[32px] sm:h-[35px] md:h-[39px] bg-white rounded-[8px] md:rounded-[10px] border-2 border-solid border-[#00da5b] text-[#00da5b] hover:bg-[#00da5b] hover:text-white transition-colors translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:400ms] h-auto">
+              <span className="[font-family:'Inter',Helvetica] font-normal text-sm sm:text-base md:text-lg lg:text-xl tracking-[0] leading-5">
                 Réserver
               </span>
             </Button>
