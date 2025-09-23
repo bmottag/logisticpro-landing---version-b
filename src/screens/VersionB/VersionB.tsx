@@ -424,7 +424,10 @@ export const VersionB = (): JSX.Element => {
       </section>
 
       {/* Footer Section */}
-      <ServiceFeaturesSection />
+      <ServiceFeaturesSection 
+        onServiceClick={handleServiceClick}
+        onSectionNavigate={scrollToSection}
+      />
 
       {/* Service Modal */}
       <ServiceModal 
