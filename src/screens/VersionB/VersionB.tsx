@@ -204,7 +204,7 @@ export const VersionB = (): JSX.Element => {
                   </p>
                   {index < 2 && (
                     <div className="mt-4 flex items-center text-[#00da5b] text-sm font-medium">
-                      <span>Ver precios y detalles</span>
+                      <span>Voir les détails</span>
                       <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                       </svg>
@@ -222,31 +222,31 @@ export const VersionB = (): JSX.Element => {
       <section id="about" className="relative w-full">
         <div className="relative w-full">
           <img
-            className="w-full h-[692px] object-cover"
+            className="w-full h-[500px] sm:h-[600px] md:h-[650px] lg:h-[692px] object-cover"
             alt="Van being unloaded"
             src="https://c.animaapp.com/mfif8x3oj7OD46/img/rectangle-25.png"
           />
 
           <div className="absolute inset-0 bg-gradient-to-r from-transparent to-[#002319]" />
 
-          <div className="absolute inset-0 flex items-center justify-end px-4 md:px-8 lg:px-20 xl:px-32">
+          <div className="absolute inset-0 flex items-center justify-end px-4 sm:px-6 md:px-8 lg:px-20 xl:px-32">
             <AboutUsSection />
           </div>
         </div>
       </section>
 
       {/* Customer Testimonials Section - Text left, woman image right */}
-      <section className="w-full bg-[#002319] py-24">
-        <div className="max-w-[1440px] mx-auto px-8 md:px-12 lg:px-20">
-          <div className="flex flex-col lg:flex-row items-start justify-between gap-12 lg:gap-20">
+      <section className="w-full bg-[#002319] py-12 sm:py-16 md:py-20 lg:py-24">
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-20">
+          <div className="flex flex-col lg:flex-row items-start justify-between gap-8 sm:gap-10 md:gap-12 lg:gap-20">
             {/* Left side - Testimonial text with padding */}
-            <div className="flex-1 max-w-[450px] px-12 py-12 pl-16">
+            <div className="flex-1 w-full max-w-full sm:max-w-[500px] lg:max-w-[450px] px-4 sm:px-6 md:px-8 lg:px-12 py-8 sm:py-10 md:py-12 lg:pl-16">
               <DeliveryServiceSection />
               
               {/* Name positioned at bottom with more spacing */}
-              <div className="flex justify-end mt-20">
+              <div className="flex justify-end mt-12 sm:mt-16 md:mt-20">
                 <div className="text-right">
-                  <h2 className="[font-family:'Inter',Helvetica] font-medium text-white text-3xl tracking-[0] leading-[30px]">
+                  <h2 className="[font-family:'Inter',Helvetica] font-medium text-white text-2xl sm:text-3xl tracking-[0] leading-[28px] sm:leading-[30px]">
                     Marie Trebouis
                   </h2>
                 </div>
@@ -257,12 +257,12 @@ export const VersionB = (): JSX.Element => {
             <div className="hidden lg:flex flex-1 justify-center items-center py-12 px-8">
               <div className="relative">
                 <img
-                  className="w-[453px] h-[454px] object-cover"
+                  className="w-[400px] h-[400px] xl:w-[453px] xl:h-[454px] object-cover"
                   alt="Decorative stripes"
                   src="https://c.animaapp.com/mfif8x3oj7OD46/img/stripes-1.png"
                 />
                 <img
-                  className="absolute w-[456px] h-[468px] top-11 left-[49px] object-cover"
+                  className="absolute w-[410px] h-[420px] xl:w-[456px] xl:h-[468px] top-8 left-10 xl:top-11 xl:left-[49px] object-cover"
                   alt="Marie Trebouis"
                   src="https://c.animaapp.com/mfif8x3oj7OD46/img/photo-1491349174775-aaafddd81942-1.png"
                 />
@@ -355,35 +355,69 @@ export const VersionB = (): JSX.Element => {
       </section>
 
       {/* Tips and CTA Section with Background */}
-      <section id="conseils" className="w-full min-h-[600px] md:min-h-[800px] lg:min-h-[1000px] xl:min-h-[1107px] relative overflow-hidden">
-        {/* Background Image */}
-        <div 
-          className="absolute inset-0 w-full h-full"
-          style={{
-            backgroundImage: "url(https://c.animaapp.com/mfif8x3oj7OD46/img/pexels-karolina-grabowska-4506225-1.png)",
-            backgroundSize: "cover",
-            backgroundPosition: "left center",
-            backgroundRepeat: "no-repeat",
-            filter: "brightness(1.2) contrast(1.15) saturate(1.1)",
-            transform: "scale(1.1)"
-          }}
-        />
-        
-        {/* Gradient Overlay - Responsive gradients */}
-        <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-black/30 via-black/50 to-black/80 md:from-black/20 md:via-black/40 md:to-black/75" />
-        
-        <div className="relative z-10 w-full px-4 md:px-8 lg:px-16 xl:px-20 py-8 md:py-12 lg:py-16">
-          {/* Title at the top right, aligned left */}
-          <div className="mb-6 md:mb-12 lg:mb-16 flex justify-center md:justify-center lg:justify-end">
-            <div className="w-full max-w-full md:max-w-4xl lg:max-w-3xl px-4 md:mr-0 lg:mr-16">
+      <section id="conseils" className="w-full relative">
+        {/* Mobile Layout - Unified Section */}
+        <div className="md:hidden relative min-h-[450px] overflow-hidden">
+          {/* Background Image - Full Width */}
+          <div 
+            className="absolute inset-0 w-full h-full"
+            style={{
+              backgroundImage: "url(https://c.animaapp.com/mfif8x3oj7OD46/img/pexels-karolina-grabowska-4506225-1.png)",
+              backgroundSize: "cover",
+              backgroundPosition: "center center",
+              backgroundRepeat: "no-repeat",
+              filter: "brightness(1.2) contrast(1.15) saturate(1.1)"
+            }}
+          />
+          
+          {/* Gradient Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/50 to-black/80" />
+          
+          {/* Content Container */}
+          <div className="absolute inset-0 flex flex-col justify-center items-center px-4 z-10">
+            {/* Title Section */}
+            <div className="mb-6 text-center">
               <TipsForMovingSection />
             </div>
-          </div>
-          
-          {/* Tips content positioned to the right */}
-          <div className="flex justify-center md:justify-end">
-            <div className="w-full max-w-full md:max-w-2xl md:mr-8">
+            
+            {/* Conseils Section */}
+            <div className="w-full">
               <CallToActionSection />
+            </div>
+          </div>
+        </div>
+
+        {/* Desktop Layout */}
+        <div className="hidden md:block min-h-[700px] lg:min-h-[800px] xl:min-h-[900px] relative overflow-hidden">
+          {/* Background Image */}
+          <div 
+            className="absolute inset-0 w-full h-full"
+            style={{
+              backgroundImage: "url(https://c.animaapp.com/mfif8x3oj7OD46/img/pexels-karolina-grabowska-4506225-1.png)",
+              backgroundSize: "cover",
+              backgroundPosition: "left center",
+              backgroundRepeat: "no-repeat",
+              filter: "brightness(1.2) contrast(1.15) saturate(1.1)",
+              transform: "scale(1.1)"
+            }}
+          />
+          
+          {/* Gradient Overlay */}
+          <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-black/20 via-black/40 to-black/75" />
+          
+          <div className="relative z-10 w-full px-8 lg:px-16 xl:px-20 py-10 lg:py-12 xl:py-16 flex flex-col justify-center h-full">
+            {/* Title at the top right, aligned left */}
+            <div className="mb-8 lg:mb-12 flex justify-center lg:justify-end">
+              <div className="w-full max-w-4xl lg:max-w-3xl px-4 lg:mr-16">
+                <TipsForMovingSection />
+              </div>
+            </div>
+            
+            {/* Tips content positioned to the right */}
+            <div className="flex justify-end">
+              <div className="w-full max-w-2xl mr-8">
+                <CallToActionSection />
+              </div>
             </div>
           </div>
         </div>
