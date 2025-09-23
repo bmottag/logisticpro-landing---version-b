@@ -14,19 +14,19 @@ export const ServiceModal: React.FC<ServiceModalProps> = ({ isOpen, onClose, ser
         title: "Déménagement résidentiel",
         teams: [
           {
-            size: "Équipe de 1 personne + camion (22 pieds)",
-            price: "80 $ / heure",
-            details: "durée minimale : 3 heures, plus le temps de transport. Pour les trajets de plus de 20 km, supplément carburant 0,70 $ / km."
+            size: "*Équipe de 1 personne + camion (22 pieds)",
+            price: "100$ / heure**",
+            details: "Durée minimale: 3 heures, plus le temps de transport. Pour les trajets de plus de 20 km, un supplément carburant de 0,70$ / km s'applique."
           },
           {
             size: "Équipe de 2 personnes + camion (22 pieds)",
-            price: "110 $ / heure",
-            details: "durée minimale : 3 heures, plus le temps de transport. Supplément carburant (> 20 km) : 0,70 $ / km."
+            price: "125$ / heure**",
+            details: "Durée minimale: 3 heures, plus le temps de transport. Pour les trajets de plus de 20 km, un supplément carburant de 0,70$ / km s'applique."
           },
           {
             size: "Équipe de 3 personnes + camion (22 pieds)",
-            price: "150 $ / heure",
-            details: "durée minimale : 3 heures, plus le temps de transport. Supplément carburant (> 20 km) : 0,70 $ / km."
+            price: "150$ / heure**",
+            details: "Durée minimale: 3 heures, plus le temps de transport. Pour les trajets de plus de 20 km, un supplément carburant de 0,70$ / km s'applique."
           }
         ],
         driverOnly: {
@@ -101,11 +101,11 @@ export const ServiceModal: React.FC<ServiceModalProps> = ({ isOpen, onClose, ser
         {/* Driver Only Service (only for residential) */}
         {serviceData.driverOnly && (
           <div className="mb-6">
-            <h3 className="text-lg md:text-xl font-semibold text-[#002319] mb-3">
-              {serviceData.driverOnly.title}
-            </h3>
-            <div className="bg-blue-50 rounded-lg p-4">
-              <p className="text-gray-700 text-sm md:text-base">
+            <div className="bg-[#00da5b] bg-opacity-10 rounded-lg p-4">
+              <h3 className="text-lg font-semibold text-[#002319] mb-2">
+                *{serviceData.driverOnly.title}
+              </h3>
+              <p className="text-[#002319] text-sm md:text-base font-medium">
                 {serviceData.driverOnly.description}
               </p>
             </div>
@@ -115,7 +115,7 @@ export const ServiceModal: React.FC<ServiceModalProps> = ({ isOpen, onClose, ser
         {/* Included Services */}
         <div className="bg-[#00da5b] bg-opacity-10 rounded-lg p-4">
           <h3 className="text-lg font-semibold text-[#002319] mb-2">
-            Service inclus
+            **Service inclus
           </h3>
           <p className="text-[#002319] text-sm md:text-base font-medium">
             {serviceData.included}
