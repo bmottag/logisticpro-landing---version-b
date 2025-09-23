@@ -61,7 +61,7 @@ const serviceCards = [
 export const VersionB = (): JSX.Element => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
   const [modalOpen, setModalOpen] = React.useState(false);
-  const [selectedService, setSelectedService] = React.useState<'residential' | 'commercial'>('residential');
+  const [selectedService, setSelectedService] = React.useState<'residential' | 'commercial' | 'installations'>('residential');
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId.replace('#', ''));
@@ -79,7 +79,7 @@ export const VersionB = (): JSX.Element => {
     setIsMobileMenuOpen(false);
   };
 
-  const handleServiceClick = (serviceType: 'residential' | 'commercial') => {
+  const handleServiceClick = (serviceType: 'residential' | 'commercial' | 'installations') => {
     setSelectedService(serviceType);
     setModalOpen(true);
   };
@@ -182,12 +182,13 @@ export const VersionB = (): JSX.Element => {
               <Card
                 key={index}
                 className={`border border-solid border-[#d9d9d9] rounded-[10px] p-4 md:p-5 lg:p-6 hover:shadow-lg transition-all translate-y-[-1rem] animate-fade-in opacity-0 w-full ${
-                  index < 2 ? 'cursor-pointer hover:border-[#00da5b] hover:scale-105' : ''
+                  [0, 1, 5].includes(index) ? 'cursor-pointer hover:border-[#00da5b] hover:scale-105' : ''
                 }`}
                 style={{ "--animation-delay": `${800 + index * 100}ms` } as React.CSSProperties}
                 onClick={() => {
                   if (index === 0) handleServiceClick('residential');
                   if (index === 1) handleServiceClick('commercial');
+                  if (index === 5) handleServiceClick('installations');
                 }}
               >
                 <CardContent className="p-0">
@@ -202,7 +203,7 @@ export const VersionB = (): JSX.Element => {
                   <p className="[font-family:'Inter',Helvetica] font-normal text-[#002319] text-sm md:text-[15px] tracking-[0] leading-[18px] md:leading-[19.7px]">
                     {service.description}
                   </p>
-                  {index < 2 && (
+                  {[0, 1, 5].includes(index) && (
                     <div className="mt-4 flex items-center text-[#00da5b] text-sm font-medium">
                       <span>Voir les détails</span>
                       <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">

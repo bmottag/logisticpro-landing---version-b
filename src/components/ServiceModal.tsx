@@ -4,7 +4,7 @@ import { Modal } from "./ui/modal";
 interface ServiceModalProps {
   isOpen: boolean;
   onClose: () => void;
-  serviceType: 'residential' | 'commercial';
+  serviceType: 'residential' | 'commercial' | 'installations';
 }
 
 export const ServiceModal: React.FC<ServiceModalProps> = ({ isOpen, onClose, serviceType }) => {
@@ -12,6 +12,7 @@ export const ServiceModal: React.FC<ServiceModalProps> = ({ isOpen, onClose, ser
     if (serviceType === 'residential') {
       return {
         title: "Déménagement résidentiel",
+        subtitle: "Équipes de 1, 2 ou 3 personnes (camion de 22 pieds)",
         teams: [
           {
             size: "*Équipe de 1 personne + camion (22 pieds)",
@@ -31,13 +32,15 @@ export const ServiceModal: React.FC<ServiceModalProps> = ({ isOpen, onClose, ser
         ],
         driverOnly: {
           title: "*Service conducteur seulement",
-          description: "Le conducteur se charge uniquement de placer les meubles à l'intérieur du camion. Le client est responsable de l'emballage, du chargement et du déchargement."
+          description: "Vous avez besoin d'un chauffeur, mais préférez gérer vous-même le reste? Notre conducteur s’occupe de la route et place vos meubles dans le camion. Vous gardez le contrôle de l’emballage, du chargement et du déchargement."
         },
-        included: "Le service comprend : couvertures de protection, ruban adhésif et matériel de déménagement."
+        subtitleIncuded: "*Service inclus",
+        included: "Pour vous simplifier la vie, nous fournissons des couvertures de protection, du ruban adhésif et tout le matériel nécessaire afin que vos biens voyagent en toute sécurité."
       };
-    } else {
+    } else if (serviceType === 'commercial') {
       return {
         title: "Déménagement commercial",
+        subtitle: "Équipes de 1, 2 ou 3 personnes (camion de 22 pieds)",
         teams: [
           {
             size: "Équipe de 1 personne + camion (22 pieds)",
@@ -55,7 +58,22 @@ export const ServiceModal: React.FC<ServiceModalProps> = ({ isOpen, onClose, ser
             details: "durée minimale : 3 heures, plus le temps de transport. Supplément carburant (> 20 km) : 0,70 $ / km."
           }
         ],
+        subtitleIncuded: "*Service inclus",
         included: "Le service comprend : couvertures de protection, ruban adhésif et matériel de déménagement."
+      };
+    } else {
+      return {
+        title: "Installations spéciales",
+        subtitle: "",
+        teams: [
+          {
+            size: "Équipe de 2 personnes",
+            price: "60$ / heure*",
+            details: "Durée minimale: 3 heures, plus le temps de transport. Pour les trajets de plus de 20 km, un supplément carburant de 0,70$ / km s'applique."
+          }
+        ],
+        subtitleIncuded: "*Service inclus",
+        included: "Veuillez noter que nos services n'incluent pas les installations électriques ni de plomberie."
       };
     }
   };
@@ -76,7 +94,7 @@ export const ServiceModal: React.FC<ServiceModalProps> = ({ isOpen, onClose, ser
         {/* Teams Section */}
         <div className="mb-6">
           <h3 className="text-lg md:text-xl font-semibold text-[#002319] mb-4">
-            Équipes de 1, 2 ou 3 personnes (camion de 22 pieds)
+            {serviceData.subtitle}
           </h3>
           
           <div className="space-y-4">
@@ -115,7 +133,7 @@ export const ServiceModal: React.FC<ServiceModalProps> = ({ isOpen, onClose, ser
         {/* Included Services */}
         <div className="bg-[#00da5b] bg-opacity-10 rounded-lg p-4">
           <h3 className="text-lg font-semibold text-[#002319] mb-2">
-            **Service inclus
+            {serviceData.subtitleIncuded}
           </h3>
           <p className="text-[#002319] text-sm md:text-base font-medium">
             {serviceData.included}
