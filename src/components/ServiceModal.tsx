@@ -34,7 +34,7 @@ export const ServiceModal: React.FC<ServiceModalProps> = ({ isOpen, onClose, ser
           title: "*Service conducteur seulement",
           description: "Vous avez besoin d'un chauffeur, mais préférez gérer vous-même le reste? Notre conducteur s’occupe de la route et place vos meubles dans le camion. Vous gardez le contrôle de l’emballage, du chargement et du déchargement."
         },
-        subtitleIncuded: "*Service inclus",
+        subtitleIncuded: "**Service inclus",
         included: "Pour vous simplifier la vie, nous fournissons des couvertures de protection, du ruban adhésif et tout le matériel nécessaire afin que vos biens voyagent en toute sécurité."
       };
     } else if (serviceType === 'commercial') {
@@ -58,7 +58,7 @@ export const ServiceModal: React.FC<ServiceModalProps> = ({ isOpen, onClose, ser
             details: "durée minimale : 3 heures, plus le temps de transport. Supplément carburant (> 20 km) : 0,70 $ / km."
           }
         ],
-        subtitleIncuded: "*Service inclus",
+        subtitleIncuded: "**Service inclus",
         included: "Le service comprend : couvertures de protection, ruban adhésif et matériel de déménagement."
       };
     } else {
