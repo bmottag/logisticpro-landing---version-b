@@ -1,7 +1,6 @@
 import React from "react";
 import { Button } from "../../components/ui/button";
 import { Card, CardContent } from "../../components/ui/card";
-import { Input } from "../../components/ui/input";
 import { ServiceModal } from "../../components/ServiceModal";
 import { AboutUsSection } from "./sections/AboutUsSection/AboutUsSection";
 import { CallToActionSection } from "./sections/CallToActionSection/CallToActionSection";
@@ -164,8 +163,9 @@ export const VersionB = (): JSX.Element => {
             </div>
             <div className="w-full max-w-[320px] sm:max-w-[400px] md:max-w-[479px] lg:max-w-[700px] xl:max-w-[900px] translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:600ms]">
               <p className="[font-family:'Inter',Helvetica] font-normal text-white text-[16px] sm:text-[20px] md:text-[22px] lg:text-[25px] tracking-[0] leading-[24px] sm:leading-[30px] md:leading-[34px] lg:leading-[38px]">
-                Du premier appel jusqu’à l’installation du dernier objet, vous n’êtes jamais seul. 
-                Nous sommes vos alliés, vos accompagnateurs et ceux qui trouvent des solutions.
+                Du premier appel jusqu'à l'installation du dernier objet, <br/>
+                vous n'êtes jamais seul. Nous sommes vos alliés, vos <br/>
+                accompagnateurs et ceux <b>qui trouvent des solutions. </b>
               </p>
             </div>
           </div>
