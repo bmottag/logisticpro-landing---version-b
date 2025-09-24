@@ -18,14 +18,18 @@ export const CustomerTestimonialsSection = (): JSX.Element => {
       <div className="relative z-10 flex items-center h-full">
         <div className="px-4 sm:px-8 md:px-12 lg:pl-[91px] translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:200ms]">
           <h1 className="max-w-[400px] sm:max-w-[450px] md:max-w-[400px] lg:max-w-[527px] [font-family:'Encode_Sans',Helvetica] font-normal text-[48px] sm:text-[48px] md:text-[64px] lg:text-[80px] xl:text-[90px] tracking-[0] leading-[50px] sm:leading-[52px] md:leading-[68px] lg:leading-[84px] xl:leading-[90px]">
-            <span className="font-bold text-white">
-              Chaque  <br />
-              départ,{" "}
-            </span>
-            <span className="font-bold text-[#00da5b]">
-              une nouvelle  <br />
+            <div className="font-bold text-white">
+              Chaque
+            </div>
+            <div className="font-bold text-white">
+              départ,
+            </div>
+            <div className="font-bold text-[#00da5b]">
+              une nouvelle
+            </div>
+            <div className="font-bold text-[#00da5b]">
               histoire
-            </span>
+            </div>
           </h1>
         </div>
       </div>
