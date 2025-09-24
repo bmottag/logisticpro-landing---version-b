@@ -227,7 +227,7 @@ export const VersionB = (): JSX.Element => {
           <img
             className="w-full h-[500px] sm:h-[600px] md:h-[650px] lg:h-[692px] object-cover"
             alt="Van being unloaded"
-            src="https://c.animaapp.com/mfif8x3oj7OD46/img/rectangle-25.png"
+            src="./images/about-us.png"
           />
 
           <div className="absolute inset-0 bg-gradient-to-r from-transparent to-[#002319]" />
@@ -241,6 +241,22 @@ export const VersionB = (): JSX.Element => {
       {/* Customer Testimonials Section - Text left, woman image right */}
       <section className="w-full bg-[#002319] py-12 sm:py-16 md:py-20 lg:py-24">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-20">
+          {/* Section Title */}
+          <div className="text-left mb-12 sm:mb-16 md:mb-20 lg:mb-24">
+            <div className="flex items-center gap-6 md:gap-8 px-4 sm:px-8 md:px-12 lg:pl-[91px]">
+              {/* Title */}
+              <h2 className="[font-family:'Encode_Sans',Helvetica] font-semibold text-[#00da5b] text-[32px] sm:text-[48px] md:text-[64px] lg:text-[76px] xl:text-[80px] leading-[36px] sm:leading-[52px] md:leading-[68px] lg:leading-[80px] xl:leading-[80px] tracking-[0] translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:0ms]">
+                Ce que disent nos clients
+              </h2>
+              
+              {/* Decorative Element - Circle outline and Line */}
+              <div className="flex items-center relative mt-2">
+                <div className="w-5 h-5 md:w-6 md:h-6 border border-[#00da5b] rounded-full bg-transparent"></div>
+                <div className="absolute left-1/2 w-20 md:w-28 h-px bg-[#00da5b] transform translate-x-0"></div>
+              </div>
+            </div>
+          </div>
+
           <div className="flex flex-col lg:flex-row items-start justify-between gap-8 sm:gap-10 md:gap-12 lg:gap-20">
             {/* Left side - Testimonial text with padding */}
             <div className="flex-1 w-full max-w-full sm:max-w-[500px] lg:max-w-[450px] px-4 sm:px-6 md:px-8 lg:px-12 py-8 sm:py-10 md:py-12 lg:pl-16">
