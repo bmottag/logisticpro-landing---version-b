@@ -191,7 +191,7 @@ export const VersionB = (): JSX.Element => {
                   if (index === 5) handleServiceClick('installations');
                 }}
               >
-                <CardContent className="p-0">
+                <CardContent className="p-0 h-full flex flex-col">
                   <img
                     className="w-[40px] h-[40px] md:w-[48px] md:h-[48px] lg:w-[52px] lg:h-[52px] mb-3 md:mb-4"
                     alt="Service icon"
@@ -200,15 +200,17 @@ export const VersionB = (): JSX.Element => {
                   <h3 className="[font-family:'Inter',Helvetica] font-semibold text-[#002319] text-lg md:text-xl tracking-[0] leading-5 mb-3 md:mb-4">
                     {service.title}
                   </h3>
-                  <p className="[font-family:'Inter',Helvetica] font-normal text-[#002319] text-sm md:text-[15px] tracking-[0] leading-[18px] md:leading-[19.7px]">
+                  <p className="[font-family:'Inter',Helvetica] font-normal text-[#002319] text-sm md:text-[15px] tracking-[0] leading-[22px] md:leading-[24px] flex-1">
                     {service.description}
                   </p>
                   {[0, 1, 5].includes(index) && (
-                    <div className="mt-4 flex items-center text-[#00da5b] text-sm font-medium">
-                      <span>Voir les détails</span>
-                      <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                      </svg>
+                    <div className="mt-4 flex justify-end">
+                      <div className="flex items-center text-[#00da5b] text-sm font-medium">
+                        <span>Voir les détails</span>
+                        <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        </svg>
+                      </div>
                     </div>
                   )}
                 </CardContent>
