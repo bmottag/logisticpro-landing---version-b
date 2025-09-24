@@ -298,7 +298,7 @@ export const VersionB = (): JSX.Element => {
 
 
       {/* CTA Section */}
-      <section className="w-full bg-[#00da5b] py-8 md:py-12 lg:py-16">
+      <section className="w-full bg-[#00da5b] py-16 md:py-20 lg:py-24 xl:py-28">
         <div className="max-w-[1440px] mx-auto px-6 md:px-16 lg:px-24 xl:px-32">
           <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8 lg:gap-12">
             {/* Left side - Content */}
@@ -307,8 +307,12 @@ export const VersionB = (): JSX.Element => {
                 Réservez votre déménagement en quelques clics !
               </h2>
 
+              <p className="[font-family:'Inter',Helvetica] font-normal text-white text-base sm:text-lg md:text-xl tracking-[0] leading-[22px] sm:leading-[24px] md:leading-[26.2px] mb-4 md:mb-6">
+                <span className="font-bold">Cliquez sur le bouton</span> ci-dessous pour accéder à notre page de réservation.
+              </p>
+
               <p className="[font-family:'Inter',Helvetica] font-normal text-white text-base sm:text-lg md:text-xl tracking-[0] leading-[22px] sm:leading-[24px] md:leading-[26.2px] mb-6 md:mb-8">
-                Cliquez sur le bouton ci-dessous pour accéder à notre page de réservation. Indiquez simplement la taille de votre appartement et découvrez immédiatement notre tarif horaire. Vous pouvez ensuite confirmer votre réservation en toute simplicité !
+                Indiquez simplement la taille de votre appartement et découvrez immédiatement notre tarif horaire. Vous pouvez ensuite confirmer votre réservation en toute simplicité !
               </p>
 
               <div className="flex flex-row gap-2 sm:gap-3 md:gap-4 mb-6 md:mb-8">
