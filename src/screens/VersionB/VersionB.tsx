@@ -20,37 +20,37 @@ const navigationItems = [
 
 const serviceCards = [
   {
-    icon: "https://c.animaapp.com/mfif8x3oj7OD46/img/group-6.png",
+    icon: "./images/residential-move.png",
     title: "Déménagement résidentiel",
     description:
       "Nous facilitons votre transition vers un nouveau chez-vous avec un service attentionné, ponctuel et efficace. Que ce soit un appartement, une maison ou un condo, notre équipe transporte vos biens avec soin et respect.",
   },
   {
-    icon: "https://c.animaapp.com/mfif8x3oj7OD46/img/group-2.png",
+    icon: "./images/commercial-move.png",
     title: "Déménagement commercial",
     description:
       "Minimisez l'interruption de vos activités grâce à notre expertise en déménagement d'entreprises. Bureaux, commerces ou ateliers; nous planifions chaque étape pour un transfert rapide et sécurisé.",
   },
   {
-    icon: "https://c.animaapp.com/mfif8x3oj7OD46/img/group-3.png",
+    icon: "./images/packing-unpacking.png",
     title: "Emballage et déballage",
     description:
       "Gagnez du temps et protégez vos objets fragiles avec notre service d'emballage professionnel. Nous fournissons les matériaux nécessaires et nous occupons du déballage si vous le souhaitez.",
   },
   {
-    icon: "https://c.animaapp.com/mfif8x3oj7OD46/img/group-7.png",
+    icon: "./images/long-distance.png",
     title: "Transport longue distance",
     description:
       "Nous facilitons votre transition vers un nouveau chez-vous avec un service attentionné, ponctuel et efficace. Que ce soit un appartement, une maison ou un condo, notre équipe transporte vos biens avec soin et respect.",
   },
   {
-    icon: "https://c.animaapp.com/mfif8x3oj7OD46/img/group-5.png",
+    icon: "./images/temporary-storage.png",
     title: "Entreposage temporaire",
     description:
       "Minimisez l'interruption de vos activités grâce à notre expertise en déménagement d'entreprises. Bureaux, commerces ou ateliers; nous planifions chaque étape pour un transfert rapide et sécurisé.",
   },
   {
-    icon: "https://c.animaapp.com/mfif8x3oj7OD46/img/group-4.png",
+    icon: "./images/special-installations.png",
     title: "Installations spéciales",
     description:
       "Confiez-nous le montage et l'installation de vos espaces résidentiels ou professionnels. Notre équipe assure un service précis, soigné et efficace pour chaque projet.",
@@ -245,15 +245,18 @@ export const VersionB = (): JSX.Element => {
           <div className="text-left mb-12 sm:mb-16 md:mb-20 lg:mb-24">
             <div className="flex items-center gap-6 md:gap-8 px-4 sm:px-8 md:px-12 lg:pl-[91px]">
               {/* Title */}
+              {/*
               <h2 className="[font-family:'Encode_Sans',Helvetica] font-semibold text-[#00da5b] text-[32px] sm:text-[48px] md:text-[64px] lg:text-[76px] xl:text-[80px] leading-[36px] sm:leading-[52px] md:leading-[68px] lg:leading-[80px] xl:leading-[80px] tracking-[0] translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:0ms]">
                 Ce que disent nos clients
               </h2>
-              
+              */}
               {/* Decorative Element - Circle outline and Line */}
+              {/*
               <div className="flex items-center relative mt-2">
                 <div className="w-5 h-5 md:w-6 md:h-6 border border-[#00da5b] rounded-full bg-transparent"></div>
                 <div className="absolute left-1/2 w-20 md:w-28 h-px bg-[#00da5b] transform translate-x-0"></div>
               </div>
+              */}
             </div>
           </div>
 
@@ -312,12 +315,12 @@ export const VersionB = (): JSX.Element => {
               </p>
 
               <p className="[font-family:'Inter',Helvetica] font-normal text-white text-base sm:text-lg md:text-xl tracking-[0] leading-[22px] sm:leading-[24px] md:leading-[26.2px] mb-6 md:mb-8">
-                Indiquez simplement la taille de votre appartement et découvrez immédiatement notre tarif horaire. Vous pouvez ensuite confirmer votre réservation en toute simplicité !
+                Indiquez simplement la taille de votre appartement et découvrez immédiatement notre tarif horaire. Vous pouvez ensuite confirmer votre réservation en toute simplicité!
               </p>
 
               <div className="flex flex-row gap-2 sm:gap-3 md:gap-4 mb-6 md:mb-8">
                 <Button className="flex-shrink-0 w-[200px] sm:w-[200px] md:w-[220px] h-[38px] sm:h-[40px] md:h-[42px] bg-white rounded-[14px] shadow-[0px_4px_4px_#00000040] text-[#00da5b] hover:bg-gray-100 transition-colors h-auto">
-                  <span className="[font-family:'Inter',Helvetica] font-semibold text-sm sm:text-base md:text-lg tracking-[0] leading-[26.2px]">
+                  <span className="[font-family:'Inter',Helvetica] font-semibold text-sm sm:text-base md:text-lg tracking-[0] leading-[26.2px] text-[#002319]">
                     Réserver votre équipe
                   </span>
                 </Button>
@@ -329,7 +332,7 @@ export const VersionB = (): JSX.Element => {
               <img
                 className="w-[400px] xl:w-[444px] h-[273px] xl:h-[303px]"
                 alt="Young woman"
-                src="https://c.animaapp.com/mfif8x3oj7OD46/img/young-woman-organizing-live-shop-3.png"
+                src="./images/woman_shop.png"
               />
 
               <Card className="absolute bottom-0 right-0 w-[200px] xl:w-[223px] bg-white rounded-[16.84px] shadow-[0px_4px_4px_#00000040] p-3 xl:p-4">
@@ -385,7 +388,7 @@ export const VersionB = (): JSX.Element => {
           <div 
             className="absolute inset-0 w-full h-full"
             style={{
-              backgroundImage: "url(https://c.animaapp.com/mfif8x3oj7OD46/img/pexels-karolina-grabowska-4506225-1.png)",
+              backgroundImage: "url(./images/tips-bg.png)",
               backgroundSize: "cover",
               backgroundPosition: "center center",
               backgroundRepeat: "no-repeat",

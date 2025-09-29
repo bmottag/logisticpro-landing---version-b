@@ -7,7 +7,7 @@ export const CustomerTestimonialsSection = (): JSX.Element => {
       <div 
         className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: "url(https://c.animaapp.com/mfif8x3oj7OD46/img/truck-logistics-operation-dusk-1.png)",
+          backgroundImage: "url(./images/truck.png)",
           filter: "brightness(1.2) contrast(1.15) saturate(1.1)"
         }}
       />
