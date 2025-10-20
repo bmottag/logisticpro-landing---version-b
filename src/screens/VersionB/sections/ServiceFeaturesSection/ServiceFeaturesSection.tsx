@@ -10,7 +10,7 @@ export const ServiceFeaturesSection = (): JSX.Element => {
     },
     {
       icon: "./images/envelope.svg",
-      text: "info@logistiquepro.com",
+      text: "info@logistiquepro.ca",
       iconClasses: "w-[22px] h-[17px]",
     },
   ];

@@ -74,80 +74,102 @@ export const CallToActionSection = (): JSX.Element => {
         </div>
       </div>
 
-      {/* Mobile Carousel View */}
-      <div className="md:hidden">
-        <div className="relative">
-          {/* Carousel Container */}
-          <div className="overflow-hidden">
-            <div 
-              className="flex transition-transform duration-300 ease-in-out"
-              style={{ transform: `translateX(-${currentSlide * 100}%)` }}
-            >
-              {steps.map((step, index) => (
-                <div key={step.number} className="w-full flex-shrink-0 px-2">
-                  <div className="flex items-start gap-4">
-                    <div className="flex-shrink-0">
-                      <div className="w-10 h-10 bg-white rounded-[20px] shadow-[0px_4px_4px_#00000040] flex items-center justify-center">
-                        <span className="[font-family:'Inter',Helvetica] font-bold text-[#00da5b] text-[24px] leading-none">
-                          {step.number}
-                        </span>
-                      </div>
-                    </div>
+{/* Mobile Carousel View */}
+<div className="md:hidden">
+  <div className="relative pt-10 pb-24 flex flex-col items-center">
+    {/* Carousel Container */}
+    <div className="overflow-hidden w-full">
+      <div
+        className="flex transition-transform duration-300 ease-in-out"
+        style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+      >
+        {steps.map((step) => (
+          <div
+            key={step.number}
+            className="w-full flex-shrink-0 flex justify-end px-2"
+          >
+            {/* Contenedor principal alineado desde la mitad */}
+            <div className="max-w-[50%] text-left ml-auto">
+              {/* Número arriba */}
+              <div className="w-14 h-14 bg-white rounded-full shadow-[0px_4px_4px_#00000040] flex items-center justify-center mb-5">
+                <span className="[font-family:'Inter',Helvetica] font-bold text-[#00da5b] text-[36px] leading-none">
+                  {step.number}
+                </span>
+              </div>
 
-                    <div className="flex-1 space-y-2">
-                      <h3 className="[font-family:'Inter',Helvetica] font-semibold text-white text-lg leading-[22px]">
-                        {step.title}
-                      </h3>
-                      <p className="[font-family:'Inter',Helvetica] font-normal text-white text-base leading-[20px]">
-                        {step.description}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              ))}
+              {/* Texto debajo del número */}
+              <h3 className="[font-family:'Inter',Helvetica] font-semibold text-white text-[28px] leading-[30px] mb-3">
+                {step.title}
+              </h3>
+              <p className="[font-family:'Inter',Helvetica] font-normal text-white text-[16px] leading-[22px] opacity-90">
+                {step.description}
+              </p>
             </div>
           </div>
-
-          {/* Navigation Arrows */}
-          <button
-            onClick={prevSlide}
-            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 w-8 h-8 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/30 transition-colors"
-          >
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-            </svg>
-          </button>
-
-          <button
-            onClick={nextSlide}
-            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-2 w-8 h-8 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/30 transition-colors"
-          >
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
-          </button>
-
-          {/* Dots Indicator */}
-          <div className="flex justify-center mt-6 gap-2">
-            {steps.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => goToSlide(index)}
-                className={`w-2 h-2 rounded-full transition-colors ${
-                  index === currentSlide ? 'bg-[#00da5b]' : 'bg-white/40'
-                }`}
-              />
-            ))}
-          </div>
-
-          {/* Slide Counter */}
-          <div className="text-center mt-4">
-            <span className="text-white/70 text-sm">
-              {currentSlide + 1} de {steps.length}
-            </span>
-          </div>
-        </div>
+        ))}
       </div>
+    </div>
+
+    {/* Flechas + Dots debajo del carrusel */}
+    <div className="mt-16 flex items-center justify-center gap-24 w-full px-6">
+      {/* Flecha izquierda */}
+      <button
+        onClick={prevSlide}
+        className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/30 transition-colors"
+      >
+        <svg
+          className="w-5 h-5"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M15 19l-7-7 7-7"
+          />
+        </svg>
+      </button>
+
+      {/* Dots Indicator */}
+      <div className="flex justify-center gap-6">
+        {steps.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => goToSlide(index)}
+            className={`w-4 h-4 rounded-full transition-all duration-300 ${
+              index === currentSlide
+                ? "bg-[#00da5b] scale-110"
+                : "bg-white/60 scale-100"
+            }`}
+          />
+        ))}
+      </div>
+
+      {/* Flecha derecha */}
+      <button
+        onClick={nextSlide}
+        className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/30 transition-colors"
+      >
+        <svg
+          className="w-5 h-5"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M9 5l7 7-7 7"
+          />
+        </svg>
+      </button>
+    </div>
+  </div>
+</div>
+
     </div>
   );
 };

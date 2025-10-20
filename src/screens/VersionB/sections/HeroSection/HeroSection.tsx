@@ -3,21 +3,19 @@ import React from "react";
 export const HeroSection = (): JSX.Element => {
   const textLines = [
     {
-      segments: [
-        { text: "Déménagements", color: "text-white", delay: "0ms" }
-      ]
+      segments: [{ text: "Déménagements", color: "text-white", delay: "0ms" }],
     },
     {
       segments: [
         { text: "faits avec ", color: "text-white", delay: "200ms" },
-        { text: "cœur, soul,", color: "text-[#00da5b]", delay: "400ms" }
-      ]
+        { text: "cœur, soul,", color: "text-[#00da5b]", delay: "400ms" },
+      ],
     },
     {
       segments: [
-        { text: "âme et précision.", color: "text-[#00da5b]", delay: "600ms" }
-      ]
-    }
+        { text: "âme et précision.", color: "text-[#00da5b]", delay: "600ms" },
+      ],
+    },
   ];
 
   return (
@@ -28,10 +26,14 @@ export const HeroSection = (): JSX.Element => {
             {line.segments.map((segment, segmentIndex) => (
               <span
                 key={`${lineIndex}-${segmentIndex}`}
-                className={`${segment.color} translate-y-[-1rem] animate-fade-in opacity-0`}
-                style={
-                  { "--animation-delay": segment.delay } as React.CSSProperties
-                }
+                className={`
+                  ${segment.color} 
+                  translate-y-[-1rem] 
+                  animate-fade-in 
+                  opacity-0 
+                  block text-center md:inline md:text-left
+                `}
+                style={{ "--animation-delay": segment.delay } as React.CSSProperties}
               >
                 {segment.text}
               </span>
