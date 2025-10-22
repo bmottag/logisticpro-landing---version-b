@@ -18,7 +18,7 @@ export const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children }) => {
       />
       
       {/* Modal Content */}
-      <div className="relative bg-white rounded-2xl shadow-2xl max-w-xs sm:max-w-lg md:max-w-2xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+      <div className="relative bg-white rounded-2xl shadow-2xl w-[90%] sm:w-[85%] md:max-w-2xl mx-auto max-h-[90vh] overflow-y-auto">
         {/* Close Button */}
         <button
           onClick={onClose}

@@ -544,49 +544,42 @@ export const VersionB = (): JSX.Element => {
 
       {/* Tips and CTA Section with Background */}
       <section id="conseils" className="w-full relative">
+        {/* Mobile Layout - Unified Section */}
+        <div className="md:hidden relative min-h-[800px] overflow-hidden">
+          {/* Background Image - Mobile */}
+        <div
+          className="absolute inset-0 w-full h-full"
+          style={{
+            backgroundImage: "url(./images/tips-bg_small.png)",
+            backgroundSize: "cover",
+            backgroundPosition: "30% 45%", // 👈 mueve la imagen hacia la izquierda y ligeramente hacia abajo
+            backgroundRepeat: "no-repeat",
+            filter: "brightness(1.2) contrast(1.15) saturate(1.1)",
+          }}
+        />
 
-{/* Mobile Layout - Unified Section */}
-<div className="md:hidden relative min-h-[800px] overflow-hidden">
-  {/* Background Image - Mobile */}
-<div
-  className="absolute inset-0 w-full h-full"
-  style={{
-    backgroundImage: "url(./images/tips-bg_small.png)",
-    backgroundSize: "cover",
-    backgroundPosition: "30% 45%", // 👈 mueve la imagen hacia la izquierda y ligeramente hacia abajo
-    backgroundRepeat: "no-repeat",
-    filter: "brightness(1.2) contrast(1.15) saturate(1.1)",
-  }}
-/>
+          {/* Gradient Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/50 to-black/80" />
 
-  {/* Gradient Overlay */}
-  <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/50 to-black/80" />
+          {/* Content Container */}
+          <div
+            className="
+              absolute inset-0 
+              flex flex-col justify-start items-center 
+              px-4 pt-12 sm:pt-16 z-10 text-center
+            "
+          >
+            {/* Title Section */}
+            <div className="mb-8">
+              <TipsForMovingSection />
+            </div>
 
-  {/* Content Container */}
-  <div
-    className="
-      absolute inset-0 
-      flex flex-col justify-start items-center 
-      px-4 pt-12 sm:pt-16 z-10 text-center
-    "
-  >
-    {/* Title Section */}
-    <div className="mb-8">
-      <TipsForMovingSection />
-    </div>
-
-    {/* Conseils Section */}
-    <div className="w-full">
-      <CallToActionSection />
-    </div>
-  </div>
-</div>
-
-
-
-
-
-
+            {/* Conseils Section */}
+            <div className="w-full">
+              <CallToActionSection />
+            </div>
+          </div>
+        </div>
 
         {/* Desktop Layout */}
         <div className="hidden md:block min-h-[700px] lg:min-h-[800px] xl:min-h-[900px] relative overflow-hidden">
@@ -624,33 +617,11 @@ export const VersionB = (): JSX.Element => {
         </div>
       </section>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
       {/* Footer Section */}
-      <ServiceFeaturesSection />
+      <ServiceFeaturesSection 
+        onServiceClick={handleServiceClick}
+        onSectionNavigate={scrollToSection}
+      />
 
       {/* Service Modal */}
       <ServiceModal 

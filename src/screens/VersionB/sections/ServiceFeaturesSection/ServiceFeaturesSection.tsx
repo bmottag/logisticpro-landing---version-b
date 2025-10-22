@@ -1,7 +1,12 @@
 import React from "react";
 import { Separator } from "../../../../components/ui/separator";
 
-export const ServiceFeaturesSection = (): JSX.Element => {
+interface ServiceFeaturesSectionProps {
+  onServiceClick?: (serviceType: 'residential' | 'commercial' | 'installations') => void;
+  onSectionNavigate?: (sectionId: string) => void;
+}
+
+export const ServiceFeaturesSection = ({ onServiceClick, onSectionNavigate }: ServiceFeaturesSectionProps): JSX.Element => {
   const contactInfo = [
     {
       icon: "./images/phone.svg",
@@ -16,18 +21,20 @@ export const ServiceFeaturesSection = (): JSX.Element => {
   ];
 
   const servicesLinks = [
-    "Déménagement résidentiel",
-    "Déménagement commercial",
-    "Emballage et déballage",
-    "Transport longue distance",
-    "Entreposage temporaire",
-    "Installations spéciales",
+    { name: "Déménagement résidentiel", action: () => onServiceClick?.('residential') },
+    { name: "Déménagement commercial", action: () => onServiceClick?.('commercial') },
+    { name: "Emballage et déballage", action: null },
+    { name: "Transport longue distance", action: null },
+    { name: "Entreposage temporaire", action: null },
+    { name: "Installations spéciales", action: () => onServiceClick?.('installations') },
   ];
 
   const companyLinks = [
-    "À propos",
-    "Nous joindre",
-    "Réserver votre équipe",
+    { name: "Accueil", id: "#hero" },
+    { name: "À propos", id: "#about" },
+    { name: "Conseils", id: "#conseils" },
+    { name: "Nous joindre", id: "#contact" },
+    { name: "Réserver votre équipe", id: "#hero" },
   ];
 
   const socialIcons = [
@@ -97,12 +104,20 @@ export const ServiceFeaturesSection = (): JSX.Element => {
               <div className="space-y-2 md:space-y-3">
                 {servicesLinks.map((service, index) => (
                   <div key={index}>
-                    <a
-                      href="#"
-                      className="[font-family:'Inter',Helvetica] text-[#829e8e] text-sm md:text-[15px] leading-[20px] md:leading-[25.5px] hover:text-white transition-colors block"
-                    >
-                      {service}
-                    </a>
+                    {service.action ? (
+                      <button
+                        onClick={service.action}
+                        className="[font-family:'Inter',Helvetica] text-[#829e8e] text-sm md:text-[15px] leading-[20px] md:leading-[25.5px] hover:text-white transition-colors block text-left w-full"
+                      >
+                        {service.name}
+                      </button>
+                    ) : (
+                      <span 
+                        className="[font-family:'Inter',Helvetica] text-[#829e8e] text-sm md:text-[15px] leading-[20px] md:leading-[25.5px] block"
+                      >
+                        {service.name}
+                      </span>
+                    )}
                   </div>
                 ))}
               </div>
@@ -116,12 +131,12 @@ export const ServiceFeaturesSection = (): JSX.Element => {
               <div className="space-y-2 md:space-y-3">
                 {companyLinks.map((link, index) => (
                   <div key={index}>
-                    <a
-                      href="#"
-                      className="[font-family:'Inter',Helvetica] text-[#829e8e] text-sm md:text-[15px] leading-[20px] md:leading-[25.5px] hover:text-white transition-colors block"
+                    <button
+                      onClick={() => onSectionNavigate?.(link.id)}
+                      className="[font-family:'Inter',Helvetica] text-[#829e8e] text-sm md:text-[15px] leading-[20px] md:leading-[25.5px] hover:text-white transition-colors block text-left w-full"
                     >
-                      {link}
-                    </a>
+                      {link.name}
+                    </button>
                   </div>
                 ))}
               </div>
