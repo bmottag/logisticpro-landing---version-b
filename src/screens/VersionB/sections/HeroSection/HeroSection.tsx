@@ -8,7 +8,7 @@ export const HeroSection = (): JSX.Element => {
     {
       segments: [
         { text: "faits avec ", color: "text-white", delay: "200ms" },
-        { text: "cœur, soul,", color: "text-[#00da5b]", delay: "400ms" },
+        { text: "cœur, ", color: "text-[#00da5b]", delay: "400ms" },
       ],
     },
     {

@@ -23,7 +23,7 @@ const serviceCards = [
     icon: "./images/residential-move.png",
     title: "Déménagement résidentiel",
     description:
-      "Nous facilitons votre transition vers un nouveau chez-vous avec un service attentionné, ponctuel et efficace. Que ce soit un appartement, une maison ou un condo, notre équipe transporte vos biens avec soin et respect.",
+      "Nous rendons votre déménagement simple et serein. Appartement, maison ou condo, notre équipe transporte vos biens avec soin, ponctualité et respect, pour que votre nouveau chez-vous devienne vite un lieu de confort.",
   },
   {
     icon: "./images/commercial-move.png",
@@ -41,13 +41,13 @@ const serviceCards = [
     icon: "./images/long-distance.png",
     title: "Transport longue distance",
     description:
-      "Nous facilitons votre transition vers un nouveau chez-vous avec un service attentionné, ponctuel et efficace. Que ce soit un appartement, une maison ou un condo, notre équipe transporte vos biens avec soin et respect.",
+      "Déplacez vos biens en toute confiance, peu importe la distance. Notre équipe veille à ce que chaque objet arrive intact, en respectant vos délais et votre tranquillité d'esprit.",
   },
   {
     icon: "./images/temporary-storage.png",
     title: "Entreposage temporaire",
     description:
-      "Minimisez l'interruption de vos activités grâce à notre expertise en déménagement d'entreprises. Bureaux, commerces ou ateliers; nous planifions chaque étape pour un transfert rapide et sécurisé.",
+      "Protégez vos biens en toute sécurité grâce à notre service d’entreposage flexible. Que ce soit pour quelques jours ou plusieurs semaines, nous veillons à ce que vos objets restent intacts et accessibles quand vous en avez besoin.",
   },
   {
     icon: "./images/special-installations.png",

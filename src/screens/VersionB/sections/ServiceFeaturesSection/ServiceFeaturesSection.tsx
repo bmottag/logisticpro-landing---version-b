@@ -74,7 +74,7 @@ export const ServiceFeaturesSection = ({ onServiceClick, onSectionNavigate }: Se
             </div>
 
             <p className="[font-family:'Inter',Helvetica] font-normal text-white text-lg md:text-xl tracking-[0] leading-[24px] md:leading-[26.2px] mb-8 md:mb-12 lg:mb-16">
-              Des déménagements faits avec cœur, soul, âme et précision.
+              Des déménagements faits avec cœur, âme et précision.
             </p>
 
             {/* Contact Information */}
@@ -126,7 +126,7 @@ export const ServiceFeaturesSection = ({ onServiceClick, onSectionNavigate }: Se
             {/* Company Column */}
             <div className="w-full sm:w-40">
               <h3 className="[font-family:'Inter',Helvetica] font-medium text-white text-lg md:text-xl tracking-[0] leading-5 mb-4 md:mb-6 lg:mb-8">
-                Company
+                Entreprise
               </h3>
               <div className="space-y-2 md:space-y-3">
                 {companyLinks.map((link, index) => (
