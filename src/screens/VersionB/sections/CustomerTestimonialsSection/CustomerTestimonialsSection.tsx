@@ -41,7 +41,9 @@ export const CustomerTestimonialsSection = (): JSX.Element => {
         >
           <div className="font-bold text-white">Chaque</div>
           <div className="font-bold text-white">départ,</div>
-          <div className="font-bold text-[#00da5b]">une nouvelle</div>
+          <div className="font-bold text-[#00da5b] whitespace-nowrap">
+            une nouvelle
+          </div>
           <div className="font-bold text-[#00da5b]">histoire</div>
         </h1>
       </div>
