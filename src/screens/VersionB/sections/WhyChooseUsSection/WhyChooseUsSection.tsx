@@ -13,11 +13,10 @@ export const WhyChooseUsSection = (): JSX.Element => {
           </span>
         </h2>
 
-        <div className="[font-family:'Inter',Helvetica] font-normal text-[#002319] text-lg sm:text-xl md:text-2xl lg:text-3xl leading-[28px] sm:leading-[32px] md:leading-[36px] lg:leading-[42px] translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:200ms] max-w-6xl mx-auto">
+        <div className="[font-family:'Inter Regular',Helvetica] font-normal text-[#002319] text-lg sm:text-xl md:text-2xl lg:text-3xl leading-[28px] sm:leading-[32px] md:leading-[36px] lg:leading-[42px] translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:200ms] max-w-6xl mx-auto">
           <p>
             Parce qu'un déménagement, c'est plus qu'un simple transport.<br />
-            Nous offrons des solutions complètes, rapides et sécuritaires <br />
-            — toujours avec le souci de votre confort et de votre tranquillité d'esprit.
+            Nous offrons des solutions complètes, rapides et sécuritaires.
           </p>
         </div>
       </div>

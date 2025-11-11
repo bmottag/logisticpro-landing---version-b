@@ -74,7 +74,7 @@ export const ServiceFeaturesSection = ({ onServiceClick, onSectionNavigate }: Se
             </div>
 
             <p className="[font-family:'Inter',Helvetica] font-normal text-white text-lg md:text-xl tracking-[0] leading-[24px] md:leading-[26.2px] mb-8 md:mb-12 lg:mb-16">
-              Des déménagements faits avec cœur, âme et précision.
+              Déménagements faits avec cœur, âme et précision.
             </p>
 
             {/* Contact Information */}

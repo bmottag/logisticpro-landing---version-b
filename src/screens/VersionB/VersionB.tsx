@@ -203,7 +203,7 @@ export const VersionB = (): JSX.Element => {
               <HeroSection />
             </div>
             <div className="w-full max-w-[700px] lg:max-w-[900px] translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:600ms]">
-              <p className="font-normal text-white text-[20px] md:text-[22px] lg:text-[25px] leading-[32px]">
+              <p className="[font-family:'Inter Regular',Helvetica] font-normal text-white text-[20px] md:text-[22px] lg:text-[25px] leading-[32px]">
                 Du premier appel jusqu'à l'installation du dernier objet, <br />
                 vous n'êtes jamais seul. Nous sommes vos alliés, vos <br />
                 accompagnateurs et ceux <b>qui trouvent des solutions.</b>
@@ -471,11 +471,11 @@ export const VersionB = (): JSX.Element => {
               </div>
 
               {/* 🔹 Descripción un poco más grande en móviles */}
-              <p className="[font-family:'Inter',Helvetica] font-normal text-white text-[18px] sm:text-[19px] md:text-xl leading-[26px] sm:leading-[28px] md:leading-[30px] mb-4 md:mb-6">
+              <p className="[font-family:'Inter Regular',Helvetica] font-normal text-white text-[18px] sm:text-[19px] md:text-xl leading-[26px] sm:leading-[28px] md:leading-[30px] mb-4 md:mb-6">
                 <span className="font-bold">Cliquez sur le bouton</span> ci-dessous pour accéder à notre page de réservation.
               </p>
 
-              <p className="[font-family:'Inter',Helvetica] font-normal text-white text-[18px] sm:text-[19px] md:text-xl leading-[26px] sm:leading-[28px] md:leading-[30px] mb-10 md:mb-8">
+              <p className="[font-family:'Inter Regular',Helvetica] font-normal text-white text-[18px] sm:text-[19px] md:text-xl leading-[26px] sm:leading-[28px] md:leading-[30px] mb-10 md:mb-8">
                 Indiquez simplement la taille de votre appartement et découvrez immédiatement notre tarif horaire. Vous pouvez ensuite confirmer votre réservation en toute simplicité !
               </p>
 

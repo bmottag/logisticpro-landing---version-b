@@ -55,17 +55,17 @@ export const CallToActionSection = (): JSX.Element => {
             >
               <div className="flex-shrink-0">
                 <div className="w-12 h-12 lg:w-14 lg:h-14 bg-white rounded-[28px] shadow-[0px_4px_4px_#00000040] flex items-center justify-center">
-                  <span className="[font-family:'Inter',Helvetica] font-bold text-[#00da5b] text-[32px] lg:text-[40px] leading-none">
+                  <span className="[font-family:'Inter Regular',Helvetica] font-bold text-[#00da5b] text-[32px] lg:text-[40px] leading-none">
                     {step.number}
                   </span>
                 </div>
               </div>
 
               <div className="flex-1 space-y-2">
-                <h3 className="[font-family:'Inter',Helvetica] font-semibold text-white text-2xl lg:text-3xl leading-[28px] lg:leading-[30px]">
+                <h3 className="[font-family:'Inter Regular',Helvetica] font-semibold text-white text-2xl lg:text-3xl leading-[28px] lg:leading-[30px]">
                   {step.title}
                 </h3>
-                <p className="[font-family:'Inter',Helvetica] font-normal text-white text-lg lg:text-xl leading-[24px] lg:leading-[26.2px]">
+                <p className="[font-family:'Inter Regular',Helvetica] font-normal text-white text-lg lg:text-xl leading-[24px] lg:leading-[26.2px]">
                   {step.description}
                 </p>
               </div>
@@ -92,16 +92,16 @@ export const CallToActionSection = (): JSX.Element => {
             <div className="max-w-[50%] text-left ml-auto">
               {/* Número arriba */}
               <div className="w-14 h-14 bg-white rounded-full shadow-[0px_4px_4px_#00000040] flex items-center justify-center mb-5">
-                <span className="[font-family:'Inter',Helvetica] font-bold text-[#00da5b] text-[36px] leading-none">
+                <span className="[font-family:'Inter Regular',Helvetica] font-bold text-[#00da5b] text-[36px] leading-none">
                   {step.number}
                 </span>
               </div>
 
               {/* Texto debajo del número */}
-              <h3 className="[font-family:'Inter',Helvetica] font-semibold text-white text-[28px] leading-[30px] mb-3">
+              <h3 className="[font-family:'Inter Regular',Helvetica] font-semibold text-white text-[28px] leading-[30px] mb-3">
                 {step.title}
               </h3>
-              <p className="[font-family:'Inter',Helvetica] font-normal text-white text-[16px] leading-[22px] opacity-90">
+              <p className="[font-family:'Inter Regular',Helvetica] font-normal text-white text-[16px] leading-[22px] opacity-90">
                 {step.description}
               </p>
             </div>
