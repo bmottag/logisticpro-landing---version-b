@@ -47,7 +47,7 @@ const serviceCards = [
     icon: "./images/temporary-storage.png",
     title: "Entreposage temporaire",
     description:
-      "Protégez vos biens en toute sécurité grâce à notre service d’entreposage flexible. Que ce soit pour quelques jours ou plusieurs semaines, nous veillons à ce que vos objets restent intacts et accessibles quand vous en avez besoin.",
+      "Protégez vos biens en toute tranquillité grâce à notre service d'entreposage flexible. Pour quelques jours ou plusieurs semaines, nous veillons à ce qu'ils restent intacts et bien gardés.",
   },
   {
     icon: "./images/special-installations.png",
